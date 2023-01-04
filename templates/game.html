@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{%block title%}Jeoparty{% endblock %}
+
+{%block game %}
+
+<div class="container_fluid bg-warning">
+    <h2>Let's Play!</h2>
+    <section class="bg-dark text-light pd-5 p-lg-0 pt-lg-5 text-center text-sm-start">
+        <div class="container text-center">
+            <div class="d-sm-flex align-items-center justify-content-between">
+                <div>
+                    <h1 class="mt-3">What Is <span class="text-warning">Jeopardy?</span></h1>
+                    <p class="lead my-4 px-3">
+                        Jeopardy! is an American game show created by Merv Griffin. The show is a quiz competition that reverses the traditional question-and-answer format of many quiz shows. Rather than being given questions, contestants are instead given general knowledge clues in the form of answers and they must identify the person, place, thing, or idea that the clue describes, phrasing each response in the form of a question.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<!-- Creating the Game Board Grid -->
+    <div id='game'></div>
+    <h2>SCORE: <span id="score"></span></h2>
+
+{% endblock %}
+

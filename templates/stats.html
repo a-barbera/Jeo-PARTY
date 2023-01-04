@@ -1,0 +1,29 @@
+<!-- this extends the navbar created in base.html -->
+{% extends "base.html" %}
+{%block title%}Statistics{% endblock %}
+{%block navbar%}
+<!-- NAVBAR -->
+<li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Dropdown link
+    </a>
+    <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="#">Chart</a></li>
+    <li><a class="dropdown-item" href="#">Graph</a></li>
+    <li><a class="dropdown-item" href="#">Something else here</a></li>
+    </ul>
+</li>
+<!-- END NAVBAR -->
+{% endblock%}
+{%block content%}
+
+<div class="container_fluid">
+    <h2>See The Stats!</h2>
+
+
+    <div id="plot"></div>
+</div>
+
+
+
+{% endblock %}
