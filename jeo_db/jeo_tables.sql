@@ -7,7 +7,7 @@ CREATE TABLE "contestants" (
     "name" varchar   NOT NULL,
     "notes" varchar   NOT NULL,
     "games_played" int   NOT NULL,
-    "total_ winnings" int   NOT NULL,
+    "total_winnings" int   NOT NULL,
     CONSTRAINT "pk_contestants" PRIMARY KEY (
         "contestant_id"
      )
