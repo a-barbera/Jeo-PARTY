@@ -32,6 +32,10 @@ def stats():
 def game():
     return render_template("game.html")
 
+@app.route("/map")
+def map():
+    return render_template("map.html")
+
 
 if __name__ == "__main__":
     app.run(debug=True)

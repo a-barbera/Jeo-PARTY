@@ -91,7 +91,7 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
   for (var i = 0; i < winners.length; i++) {
     var winner = winners[i];
     L.marker(winner.location)
-      .bindPopup(`<h1>${winner.name}</h1> <hr> <h3>Total Winnings:$${winner.total_winnings.toLocaleString()}</h3><hr><h5>${winner.notes}</h5>`)
+      .bindPopup(`<h1>${winner.name}</h1> <hr> <h3>Total Winnings:$${winner.total_winnings.toLocaleString()}</h3><hr><h4>Games Played:${winner.games_played}</h4><hr><h5>${winner.notes}</h5>`)
       .addTo(map);
   }
   
