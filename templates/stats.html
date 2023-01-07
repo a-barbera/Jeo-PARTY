@@ -23,7 +23,18 @@
        <div id="plot"></div>
     
 </div>
+<div>
+    PSQL Flask
+</div>
 
+<div>
+    {% for c in categories %}
+    <ul>
+        <li>{{c.category}}</li>
+        <li>{{c.clue_count}}</li>
+    </ul>
+    {% endfor %}
+</div>
 
 
 {% endblock %}
