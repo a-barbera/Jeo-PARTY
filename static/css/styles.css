@@ -64,7 +64,7 @@ p {
     opacity: 1;
   }
 
-  #game{
+#game{
     display: flex;
 }
 
@@ -105,4 +105,8 @@ p {
 
 .wrong-answer{
     background-color: rgb(240, 23, 7);
+}
+
+.score-text{
+    font-size: 80px;
 }
