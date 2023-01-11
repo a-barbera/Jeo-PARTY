@@ -23,4 +23,26 @@ This project can be recreated on a local server and is also hosted [here](#).
 4. Patrick Brennan
 5. Peter Warren
 
+# Data ETL
+Pandas was used to load JSON from Cluebase into a dataframe. This dataframe was then cleaned before being read into a postgres database. The information in this database was used to create interactive data visualizations for the stats.
 
+Pandas was used to clean data from jService and create a JSON file that was used for the game portion of the project.
+
+# Website Organization
+The website is organized into three sections.
+ - Play The Game!
+ - See The Stats!
+ - View the Map!
+
+## The Game
+The Game was created using javascript and contains a gameboard that mimics the look and feel of the actual Jeopardy! gameboard. 
+
+Game categories and the answers for those categories are randomized every time the page is reloaded. When a player picks an answer, the response to the answer is entered into a text box. The response must exactly match what is contained in the JSON file. 
+
+ - Correct answers will add to the player's total score.
+ - The background of incorrect answers will turn red.
+ - The background of correct answers will turn green.
+ - The answer's element can be inspected to get the correct answer.
+ ## The Stats
+ ## The Map
+ 
