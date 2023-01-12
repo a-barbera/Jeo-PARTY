@@ -17,6 +17,17 @@
       }
 </style>
 
+<!-- ADDING MUSIC TO GAME PAGE -->
+<audio id="myAudio" autoplay>
+    <source src="../static/think_music.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+<!-- JS script to keep audio volume at 20% -->
+<script>
+    var music = document.getElementById("myAudio");
+    music.volume = 0.2;
+</script>
+
 <div class="container-fluid text-center">
 
 <div class="container-fluid">
@@ -40,16 +51,11 @@
 </div>
 
 <!-- Creating the Game Board Grid -->
-<<<<<<< HEAD
+
 <div class="container-fluid">
     <div id='game' class="border alt-dark text-light text-center justify-content-center align-items-center">
         
     </div>
 </div>
-=======
-    <div id='game'></div>
-    <h2 class="score-text">SCORE: <span id="score"></span></h2>
-
->>>>>>> e22e73929b64fd14a1ed1374072693641def4e5d
 {% endblock %}
 
