@@ -111,6 +111,12 @@ html, body, #map {
     background-color: rgb(240, 23, 7);
 }
 
+<<<<<<< HEAD
 .alt-dark {
     background: radial-gradient(#000000, #616161);
 }
+=======
+.score-text{
+    font-size: 80px;
+}
+>>>>>>> e22e73929b64fd14a1ed1374072693641def4e5d

@@ -34,6 +34,10 @@ fetch("static/js/cleanedJeoQs.json")
                 }
                 while(includes(questions, q.question))
 
+                
+                // add question to questions list
+                questions.push(q.question)
+
                 // clean answer of special chracters
                 answer = q.answer.replace(/[&\/\\#,+()$~%.'":*?<>{}]/g, '');
 
@@ -76,6 +80,7 @@ function getQuestion(category, value, questions){
 
             //save the question as a var
             var q = randomized_qs[i]
+            break;
         }
     }
     // if there is no value for q because one for that value could not be found, loop back through and just find any question
@@ -83,6 +88,7 @@ function getQuestion(category, value, questions){
         for (let i = 0; i<randomized_qs.length;i++){
             if(randomized_qs[i].category == category){
                 var q = randomized_qs[i]
+                break;
             }
         }
     }
@@ -250,6 +256,7 @@ function checkAnswer(){
      // create variables for the answer given and the parent element of the square for manipulation
      var answerValue = document.getElementById('answer').value
      const squareOfButton = this.parentElement
+     const actualAnswer = squareOfButton.getAttribute('text-answer')
 
      // remove the unansered class so the below adding back of event listeners dpes not apply
      squareOfButton.classList.remove('unanswered')
@@ -281,7 +288,8 @@ function checkAnswer(){
         // change the square to green and show value won
         squareOfButton.classList.add('correct-answer')
         let value = squareOfButton.getAttribute('value')
-        squareOfButton.innerHTML = dollarsign.concat(value)
+        let dollarvalue = dollarsign.concat(value)
+        squareOfButton.innerHTML = actualAnswer.concat(" ",dollarvalue)
     
     // if answer is incorrect:
     }else{
@@ -296,8 +304,9 @@ function checkAnswer(){
         var button = document.getElementById('submitButton')
         squareOfButton.removeChild(button)
 
-        // change square value to $0 to show nothing was won
-        squareOfButton.innerHTML = dollarsign.concat(0)
+           // add answer to the box
+           let dollarvalue = dollarsign.concat(0)
+           squareOfButton.innerHTML = actualAnswer.concat(" ",dollarvalue)
     }
     
     // remove the event listener for this specific square
