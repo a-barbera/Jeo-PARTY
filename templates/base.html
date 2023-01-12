@@ -56,7 +56,7 @@
 </section>
 <!-- END NAVBAR -->
 
-    <div class="container-fluid text-center">
+<!-- <div class="container-fluid text-center"> -->
         <!-- <div><img src="static/title.png" style="width:200px" alt="jeopardy title"></div> -->
 
     <!-- content from child template index.html -->
@@ -73,6 +73,11 @@
     <!-- content from child template map.html -->
     {%block mapcontent%}
     {% endblock %}
+
+    <!-- content from child template stats.html -->
+    {%block stats%}
+    
+    {% endblock %}
     
     
     <!-- JS BOOTSTRAP PREMADE CODE -->
@@ -85,12 +90,12 @@
     crossorigin=""></script>
     <!-- D3 JS LINK -->
     <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
     <!-- adding local JS files -->
     <script src="{{url_for('static', filename ='js/jeopardy.js')}}"></script>
     <script type="text/javascript" src="{{url_for('static', filename ='js/plots.js')}}"></script>
     <script type="text/javascript" src="{{url_for('static', filename ='js/mapscript.js')}}"></script>
-    <!-- adding d3 -->
-    <script src="https://d3js.org/d3.v5.min.js"></script>
+    
 
     
     

@@ -15,14 +15,32 @@ body, html {
     background-size: cover;
   }
 </style>
-<div class="container-fluid text-center text-light">
+<!-- <div class="container-fluid text-light">
     <iframe src="https://giphy.com/embed/MEMVosUfcO9MSawRv8" width="200" height="200" frameBorder="0" class="giphy-embed" ></iframe><p><a href="https://giphy.com/stickers/jeopardy-world-globe-jeopardy-logo-MEMVosUfcO9MSawRv8"></a></p>
     <h1>Welcome to the JeoPARTY</h1>
-</div>
+</div> -->
+
+<!-- ADDING MUSIC TO HOME PAGE -->
+<audio id="myAudio" autoplay>
+    <source src="../static/think_music.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+<!-- JS script to keep audio volume at 20% -->
+<script>
+    var music = document.getElementById("myAudio");
+    music.volume = 0.2;
+</script>
+
 
 <!-- BOXES -->
 <section class="p-5">
     <div class="container position-absolute top-50 start-50 translate-middle">
+        <div class="row text-center text-light g-4">
+            <h1>Welcome to Jeo <em>"PARTY"</em> </h1>
+        <div class="container-fluid text-light">
+            <iframe src="https://giphy.com/embed/MEMVosUfcO9MSawRv8" width="200" height="200" frameBorder="0" class="giphy-embed" ></iframe><p><a href="https://giphy.com/stickers/jeopardy-world-globe-jeopardy-logo-MEMVosUfcO9MSawRv8"></a></p>
+        </div>
+        </div>
         <div class="row text-center g-4">
             <div class="col-md">
                 <div class="card bg-primary text-light">
