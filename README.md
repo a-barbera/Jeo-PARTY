@@ -39,7 +39,7 @@ The website is organized into three sections.
  - View the Map!
 
 ## The Game
-The Game was created using javascript and contains a gameboard that mimics the look and feel of the actual Jeopardy! gameboard. 
+The Game was created using javascript (including libraries d3.js and jQuery) and contains a gameboard that mimics the look and feel of the actual Jeopardy! gameboard. 
 
 Game categories and the answers for those categories are randomized every time the page is reloaded. When a player picks an answer, the response to the answer is entered into a text box. The response must exactly match what is contained in the JSON file. 
 
