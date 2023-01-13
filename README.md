@@ -1,5 +1,7 @@
 # Jeo-PARTY
-Group project designed to allow the user to play the popular trivia game show Jeopardy and also see some fun facts regarding the franchise.
+<h3>Group project designed to allow the user to <b> play the popular trivia game show Jeopardy!</b> and also <b> see some fun facts</b> regarding the franchise.</h3>
+
+![home page visual w/Alex Trebek](static/media/Screenshot%202023-01-13%20141616.jpg)
 
 # Project Overview:
 To design an informative and interactive website powered by Python Flask API that includes use of HTML/CSS and JavaScript.  Resources include:
@@ -28,6 +30,8 @@ Pandas was used to load JSON from Cluebase into a dataframe. This dataframe was 
 
 Pandas was used to clean data from jService and create a JSON file that was used for the game portion of the project.
 
+![data flowchart](static/media/full_stack_vis.jpg)
+
 # Website Organization
 The website is organized into three sections.
  - Play The Game!
@@ -43,6 +47,8 @@ Game categories and the answers for those categories are randomized every time t
  - The background of incorrect answers will turn red.
  - The background of correct answers will turn green.
  - The answer's element can be inspected to get the correct answer.
+
  ## The Stats
+Accessing the SQL database from inside the flask app, charts were populated that assist the user in visualizing the top clue categories from the years 1985-2012.  Another visual created shows the shows highest earning players, along with how many games they played to reach that goal.  These charts were created using JavaScript and Plotly and are interactive.
  ## The Map
  
