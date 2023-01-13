@@ -67,7 +67,7 @@ html, body, #map {
     opacity: 1;
   }
 
-#game{
+#game {
     display: flex;
     justify-content: safe center;
 }
@@ -117,7 +117,6 @@ html, body, #map {
 .alt-dark {
     background: radial-gradient(#000000, #616161);
 }
-<<<<<<< HEAD
 
 .score-text{
     font-size: 80px;
@@ -126,8 +125,3 @@ html, body, #map {
 .alt-primary {
     background-color:#1f56ce;
 }
-=======
-.score-text{
-    font-size: 80px;
-}
->>>>>>> 70e6c612bd9ec97235caa4b80cd0d30b7e790b0e
