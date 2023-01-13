@@ -114,6 +114,11 @@ html, body, #map {
 .alt-dark {
     background: radial-gradient(#000000, #616161);
 }
-/* .score-text{
+
+.score-text{
     font-size: 80px;
-} */
+}
+
+.alt-primary {
+    background-color:#1f56ce;
+}
