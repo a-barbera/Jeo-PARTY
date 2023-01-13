@@ -220,7 +220,7 @@ function addCategory(category) {
 function flipSquare() {
     // blank out the text and change font stylings to be smaller and white
     this.innerHTML = ""
-    this.style.fontSize = '15px'
+    this.style.fontSize = '0.8vw'
     this.style.lineHeight = '30px'
     this.style.color = 'rgb(255,255,255)'
 
@@ -266,8 +266,8 @@ function checkAnswer(){
     allSquares.forEach(square => square.addEventListener('click', flipSquare))
 
     // change font stylings back to the original size and color
-    squareOfButton.style.fontSize = '80px'
-    squareOfButton.style.lineHeight = '120px'
+    squareOfButton.style.fontSize = '1.8vw'
+    squareOfButton.style.lineHeight = '50px'
     squareOfButton.style.color = 'rgb(232, 184, 125)'
 
     // if else statement that runs code based on if the answer is correct (answers and answer attribute set to lower case)
