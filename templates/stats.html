@@ -13,28 +13,64 @@
     <li><a class="dropdown-item" href="#">Something else here</a></li>
     </ul>
 </li>
-<!-- END NAVBAR -->
+
 {% endblock%}
+<!-- END NAVBAR -->
+
 {%block content%}
 
-<div class="container_fluid">
-    <h2>See The Stats!</h2>
 
-       <div id="plot"></div>
+
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <div id="graph1JSON"></div>
+    <div id="fig5"></div>
+   
+
+    <div class="row p-4">
+        <div class="card m-auto" data-aos="fade-down" >
+                <div id="chart1"></div>
+
+                   
+            
+        </div>
     
-</div>
-<div>
-    PSQL Flask
-</div>
+    <div class="row p-4">
+        <div class="card m-auto" data-aos="fade-up">
+                <div id="chart3"></div>
 
-<div>
-    {% for c in categories %}
-    <ul>
-        <li>{{c.category}}</li>
-        <li>{{c.clue_count}}</li>
-    </ul>
-    {% endfor %}
-</div>
+                   
+            
+        </div>
+    </div>
+    
+    
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+
+    var graph1 = {{graph1JSON | safe }};
+    Plotly.plot('chart1', graph1, {});
+
+
+    var graph5 = {{fig5 | safe }};
+    Plotly.plot('chart3', graph5, {});
+    
+
+    
+    AOS.init({
+        offset:400,
+        duration:1000,
+    });
+
+</script>
+
+
+
+
+
+
+
 
 
 {% endblock %}
