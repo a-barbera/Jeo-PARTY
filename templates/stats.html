@@ -10,15 +10,22 @@
     <ul class="dropdown-menu">
     <li><a class="dropdown-item" href="#">Chart</a></li>
     <li><a class="dropdown-item" href="#">Graph</a></li>
-    <li><a class="dropdown-item" href="#">Something else here</a></li>
+    <li><a class="dropdown-item" href="/tribute">Alex is Bae</a></li>
     </ul>
 </li>
 
 {% endblock%}
+<<<<<<< HEAD
 <!-- END NAVBAR -->
 
 {%block content%}
 
+=======
+{%block stats%}
+<div class="container-fluid text-center">
+<div class="container_fluid">
+    <h2>See The Stats!</h2>
+>>>>>>> e38d56bb7930ed4c8f407a8fa0549dc44df88905
 
 
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -35,6 +42,7 @@
             
         </div>
     
+<<<<<<< HEAD
     <div class="row p-4">
         <div class="card m-auto" data-aos="fade-up">
                 <div id="chart3"></div>
@@ -71,6 +79,22 @@
 
 
 
+=======
+</div>
+<div>
+    PSQL Flask
+</div>
+
+<div>
+    {% for c in categories %}
+    <ul>
+        <li>{{c.category}}</li>
+        <li>{{c.clue_count}}</li>
+    </ul>
+    {% endfor %}
+</div>
+</div>
+>>>>>>> e38d56bb7930ed4c8f407a8fa0549dc44df88905
 
 
 {% endblock %}

@@ -1,10 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
-@import url('https://fonts.cdnfonts.com/css/itc-korinna-std');
-
+@font-face {
+    font-family: Korinna;
+    src: url(ITC_Korinna_Bold.ttf);
+}
 body {
-    /* background-color: rgb(173, 164, 164); */
-
     font-family: 'Anton', sans-serif;
+}
+
+#game body{
+    margin: 0;
+    max-width: 100%;
+    height: 100%;
+    padding: 0;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255,255,255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: Korinna;
 }
 
 
@@ -13,7 +27,7 @@ html, body, #map {
     width: 100vw;
     }
 
-p {
+#game p {
     font-family: 'ITC_ Korinna', sans-serif;
 }
 
@@ -52,3 +66,62 @@ p {
   .container:hover .overlay {
     opacity: 1;
   }
+
+#game {
+    display: flex;
+    justify-content: safe center;
+}
+ 
+.genre-title{
+    width: 300px;
+    height: 150px;
+    text-align: center;
+    overflow-wrap: break-word;
+    hyphens: auto;
+    font-size: 25px;
+    font-size-adjust: 0.74;
+    margin: 5px;
+    padding: 10px;
+    padding-top: 50px;
+    line-height: 30px;
+}
+.square{
+    width: 300px;
+    height: 150px;
+    background-color: rgb(26,26,255);
+    border-left: solid rgb(19,19,160) 10px;
+    border-right: solid rgb(11,11,91) 10px;
+    border-top: solid rgb(1,61,200) 10px;
+    border-bottom: solid rgb(20,20,89) 10px;
+    text-align: center;
+    color: rgb(232, 184, 125);
+    text-shadow: 2px 2px rgb(0,0,0);
+    font-size: 3.5vw;
+    margin: 5px;
+    padding: 10px;
+    padding-bottom: 80px;
+    line-height: 120px;
+    font-size-adjust: 0.74;
+    overflow-wrap: break-word;
+    hyphens: auto;
+}
+
+.correct-answer{
+    background-color: rgb(8, 196, 8);
+}
+
+.wrong-answer{
+    background-color: rgb(240, 23, 7);
+}
+
+.alt-dark {
+    background: radial-gradient(#000000, #616161);
+}
+
+.score-text{
+    font-size: 80px;
+}
+
+.alt-primary {
+    background-color:#1f56ce;
+}

@@ -141,6 +141,10 @@ def game():
 def map():
     return render_template("map.html")
 
+@app.route("/tribute")
+def tribute():
+    return render_template("tribute.html")
+
 
 if __name__ == "__main__":
     with app.app_context():
