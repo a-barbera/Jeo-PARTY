@@ -1,14 +1,12 @@
-from flask import Flask, render_template, url_for, redirect, request, session, flash
+from flask import Flask, render_template, url_for, redirect, request, session, flash,jsonify
 from datetime import timedelta
 from flask_sqlalchemy import SQLAlchemy
 import psycopg2
+import plotly
 import plotly.express as px
 import plotly.graph_objects as go
-from dash import Dash, dcc, html, Input, Output
-import plotly
 import json
 import pandas as pd
-
 
 import numpy as np
 
@@ -17,17 +15,16 @@ from sqlalchemy.ext.automap import automap_base
 from sqlalchemy.orm import Session
 from sqlalchemy import create_engine, func
 
-from flask import Flask, jsonify
 
 # images, css, and js all need to be in the static folder, specifically.  
 # must be accessed using the {{url_for('static', filename='file_path')}} wherever href and src are used
 
 app = Flask(__name__)
 app.secret_key = "secret"
-#=======================================================================
+# =======================================================================
 
 # adding connection to database. file name is name of the table
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:Daddy1995!@localhost/jeoparty'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:postgres@localhost/jeoparty'
 # this code removes a warning
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
@@ -50,7 +47,7 @@ class Contestants(db.Model):
     total_winnings = db.Column(db.Integer)
     
 
-#=======================================================================
+# =======================================================================
 
 # creating the home page
 @app.route("/")
@@ -141,9 +138,9 @@ def game():
 def map():
     return render_template("map.html")
 
-@app.route("/tribute")
-def tribute():
-    return render_template("tribute.html")
+# @app.route("/tribute")
+# def tribute():
+#     return render_template("tribute.html")
 
 
 if __name__ == "__main__":
