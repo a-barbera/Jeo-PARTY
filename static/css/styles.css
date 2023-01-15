@@ -3,13 +3,16 @@
     font-family: Korinna;
     src: url(ITC_Korinna_Bold.ttf);
 }
-
 body {
+    font-family: 'Anton', sans-serif;
+}
+
+#game body{
     margin: 0;
-    width: 100%;
+    max-width: 100%;
     height: 100%;
     padding: 0;
-    background-color: rgb(46,46,46);
+    background-color: rgb(0, 0, 0);
     color: rgb(255,255,255);
     display: flex;
     justify-content: center;
@@ -24,7 +27,7 @@ html, body, #map {
     width: 100vw;
     }
 
-p {
+#game p {
     font-family: 'ITC_ Korinna', sans-serif;
 }
 
@@ -64,10 +67,11 @@ p {
     opacity: 1;
   }
 
-  #game{
+#game {
     display: flex;
+    justify-content: safe center;
 }
-
+ 
 .genre-title{
     width: 300px;
     height: 150px;
@@ -92,11 +96,14 @@ p {
     text-align: center;
     color: rgb(232, 184, 125);
     text-shadow: 2px 2px rgb(0,0,0);
-    font-size: 100px;
+    font-size: 3.5vw;
     margin: 5px;
     padding: 10px;
+    padding-bottom: 80px;
     line-height: 120px;
     font-size-adjust: 0.74;
+    overflow-wrap: break-word;
+    hyphens: auto;
 }
 
 .correct-answer{
@@ -105,4 +112,16 @@ p {
 
 .wrong-answer{
     background-color: rgb(240, 23, 7);
+}
+
+.alt-dark {
+    background: radial-gradient(#000000, #616161);
+}
+
+.score-text{
+    font-size: 80px;
+}
+
+.alt-primary {
+    background-color:#1f56ce;
 }

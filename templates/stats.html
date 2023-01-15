@@ -1,6 +1,7 @@
 <!-- this extends the navbar created in base.html -->
 {% extends "base.html" %}
 {%block title%}Statistics{% endblock %}
+
 {%block navbar%}
 <!-- NAVBAR -->
 <li class="nav-item dropdown">
@@ -8,33 +9,63 @@
     Dropdown link
     </a>
     <ul class="dropdown-menu">
-    <li><a class="dropdown-item" href="#">Chart</a></li>
-    <li><a class="dropdown-item" href="#">Graph</a></li>
-    <li><a class="dropdown-item" href="#">Something else here</a></li>
+    <li><a class="dropdown-item" href="#graph1JSON">Top Categories</a></li>
+    <li><a class="dropdown-item" href="#fig5">Top Winners</a></li>
+    <!-- <li><a class="dropdown-item" href="/tribute">Alex is Bae</a></li> -->
     </ul>
 </li>
-<!-- END NAVBAR -->
-{% endblock%}
-{%block content%}
 
+{% endblock%}
+
+{%block stats%}
+<div class="container-fluid text-center">
 <div class="container_fluid">
     <h2>See The Stats!</h2>
 
-       <div id="plot"></div>
-    
-</div>
-<div>
-    PSQL Flask
-</div>
 
-<div>
-    {% for c in categories %}
-    <ul>
-        <li>{{c.category}}</li>
-        <li>{{c.clue_count}}</li>
-    </ul>
-    {% endfor %}
-</div>
+<!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
+
+<div id="plot"></div>
+    <!-- <div id="graph1JSON"></div>
+    <div id="fig5"></div> -->
+   
+
+    <div class="row p-4">
+        <div class="card m-auto" data-aos="fade-down" >
+                <div id="chart1"></div>
+
+                   
+            
+        </div>
+    
+    <div class="row p-4">
+        <div class="card m-auto" data-aos="fade-up">
+                <div id="chart3"></div>
+
+                   
+            
+        </div>
+    </div>
+
+<script>
+/*
+    var graph1 = {{graph1JSON | safe }};
+    Plotly.plot('chart1', graph1, {});
+
+
+    var graph5 = {{fig5 | safe }};
+    Plotly.plot('chart3', graph5, {});
+    
+
+    
+    AOS.init({
+        offset:400,
+        duration:1000,
+    });*/
+
+</script>
+
+
 
 
 {% endblock %}

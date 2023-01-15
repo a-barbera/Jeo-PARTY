@@ -13,3 +13,30 @@ CREATE TABLE "contestants" (
      )
 );
 
+DROP TABLE IF EXISTS categories;
+CREATE TABLE "categories" (
+    "index" int NOT NULL,
+    "category" varchar NOT NULL,
+    "clue_count" int NOT NULL,
+    CONSTRAINT "pk_categories" PRIMARY KEY (
+        "index"
+    )
+
+
+);
+
+DROP TABLE IF EXISTS questions;
+CREATE TABLE "questions" (
+    "question_id" int   NOT NULL,
+    "show_number" int   NOT NULL,
+    "air_date" date   NOT NULL,
+    "round" varchar   NOT NULL,
+	"category" varchar   NOT NULL,
+	"value" varchar   NOT NULL,
+    "question" varchar   NOT NULL,
+	"answer" varchar   ,
+    CONSTRAINT "pk_questions" PRIMARY KEY (
+        "question_id"
+     )
+);
+
