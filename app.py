@@ -20,7 +20,7 @@ app.secret_key = "secret"
 #=======================================================================
 
 # adding connection to database. file name is name of the table
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:postgres@localhost/jeoparty'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:password@localhost/jeoparty'
 # this code removes a warning
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
