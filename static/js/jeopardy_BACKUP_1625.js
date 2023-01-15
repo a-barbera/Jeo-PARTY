@@ -214,8 +214,13 @@ function addCategory(category) {
 
         // add to i to move to next value in jeo_values
         i+=1
+<<<<<<< HEAD
         })
+    // putting it back into the HTML
+=======
+    })
 
+>>>>>>> 77a2ee698888de80d3085718da2f6df07e8b8b7a
     game.append(column)
 }
 

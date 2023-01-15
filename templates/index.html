@@ -1,20 +1,21 @@
 <!-- this extends the navbar created in base.html -->
 {% extends "base.html" %}
-
+<title>{% block title %}Home{% endblock %}</title>
 {%block content%}
-<style>
-body, html {
+
+<!--NEEDS STYLE TAGS to be used 
+    body, html {
     height: 100%;
   
-    /* The image used */
+     The image used 
     background-image: url("https://www.dropbox.com/s/fw1je52ldl7dr9j/j_index_background.png?raw=1"); 
   
-    /* Center and scale the image nicely */
+     Center and scale the image nicely 
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-  }
-</style>
+  } -->
+
 
 
 <!-- BOXES -->
@@ -28,7 +29,7 @@ body, html {
         </div>
         <div class="row text-center g-4">
             <div class="col-md">
-                <div class="card alt-primary text-light">
+                <div class="card alt-primary border-secondary text-light">
                     <div class="card-body text-center">
                         <div class="h1 mb-3">
                             <i class="bi bi-joystick"></i>
@@ -42,7 +43,7 @@ body, html {
                 </div>
             </div>
             <div class="col-md">
-                <div class="card alt-primary text-light">
+                <div class="card alt-primary border-secondary text-light">
                     <div class="card-body text-center">
                         <div class="h1 mb-3">
                             <i class="bi bi-bar-chart-fill"></i>
@@ -56,7 +57,7 @@ body, html {
                 </div>
             </div>
             <div class="col-md">
-                <div class="card alt-primary text-light">
+                <div class="card border-secondary alt-primary text-light">
                     <div class="card-body text-center">
                         <div class="h1 mb-3">
                             <i class="bi bi-globe-americas"></i>

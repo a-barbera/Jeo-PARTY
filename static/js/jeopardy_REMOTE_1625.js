@@ -172,9 +172,6 @@ function shuffle(array) {
   }
 
 function addCategory(category) {
-    // grad game div
-    var game = document.getElementById('game')
-
     // adds a column for the given category
     const column = document.createElement('div')
     column.classList.add('genre-column')
@@ -214,7 +211,7 @@ function addCategory(category) {
 
         // add to i to move to next value in jeo_values
         i+=1
-        })
+    })
 
     game.append(column)
 }

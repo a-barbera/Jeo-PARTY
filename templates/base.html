@@ -12,9 +12,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <!-- link for local css -->
     <link rel="stylesheet" href="{{url_for('static', filename ='css/styles.css')}}">
-    <link rel="stylesheet" href="{{url_for('static', filename ='css/mapstyle.css')}}">
+    <!-- <link rel="stylesheet" href="{{url_for('static', filename ='css/mapstyle.css')}}"> -->
     <!-- plotly JS link -->
-    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-2.17.1.min.js"></script>
     <!-- Google FONT CSS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,9 +22,25 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
      integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
      crossorigin=""/>
+     <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+    integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+    crossorigin=""></script>
+     <!-- Avoid favicon requests -->
+     <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon"> 
+     <!-- D3 JS LINK -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+     <!-- Plotly AOS JS and CSS link -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+
+
 
 </head>
 <body>
+
 <!-- NAVBAR -->
 <section>
     <nav class="navbar navbar-expand-lg alt-primary navbar-dark text-light bg-body-tertiarybg-body-tertiary" >
@@ -56,6 +72,7 @@
 </section>
 <!-- END NAVBAR -->
 
+
 <!-- <div class="container-fluid text-center"> -->
         <!-- <div><img src="https://www.dropbox.com/s/d1w2j1mt3zmykke/title.png?raw=1" style="width:200px" alt="jeopardy title"></div> -->
 
@@ -85,15 +102,15 @@
     <!-- adding the jQuery library CDN? -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <!-- Leaflet JS -->
-    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+    <!-- <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
     integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
-    crossorigin=""></script>
+    crossorigin=""></script> -->
     <!-- D3 JS LINK -->
-    <script src="https://d3js.org/d3.v7.min.js"></script>
-    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <!-- <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://d3js.org/d3.v5.min.js"></script> -->
     <!-- adding local JS files -->
     <script src="{{url_for('static', filename ='js/jeopardy.js')}}"></script>
-    <script type="text/javascript" src="{{url_for('static', filename ='js/plots.js')}}"></script>
+    <!-- <script type="text/javascript" src="{{url_for('static', filename ='js/plots.js')}}"></script> -->
     <script type="text/javascript" src="{{url_for('static', filename ='js/mapscript.js')}}"></script>
     
 

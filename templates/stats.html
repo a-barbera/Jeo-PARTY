@@ -1,41 +1,73 @@
 <!-- this extends the navbar created in base.html -->
 {% extends "base.html" %}
 {%block title%}Statistics{% endblock %}
+
 {%block navbar%}
 <!-- NAVBAR -->
 <li class="nav-item dropdown">
     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-    Dropdown link
+    Graphs
     </a>
     <ul class="dropdown-menu">
-    <li><a class="dropdown-item" href="#">Chart</a></li>
-    <li><a class="dropdown-item" href="#">Graph</a></li>
-    <li><a class="dropdown-item" href="#">Something else here</a></li>
+    <li><a class="dropdown-item" href="#chart1">Top Categories</a></li>
+    <li><a class="dropdown-item" href="#chart3">Top Winners</a></li>
+    <li><a class="dropdown-item" href="/tribute">Alex is Bae</a></li>
     </ul>
 </li>
-<!-- END NAVBAR -->
+
 {% endblock%}
+
 {%block stats%}
 <div class="container-fluid text-center">
 <div class="container_fluid">
     <h2>See The Stats!</h2>
 
-       <div id="plot"></div>
-    
-</div>
-<div>
-    PSQL Flask
+
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+
+<div class="container-fluid">
+    <div class="row p-4">
+        <div class="card">
+            <div class="card-header">
+              Top Categories
+            </div>
+            <div class="card-body alt-primary" data-aos="fade-down">
+                <div id="chart1"></div> 
+            </div>
+        </div>
+    <div class="row p-4">
+        <div class="card">
+            <div class="card-header">
+              Top 10 Winners
+            </div>
+            <div class="card-body alt-primary" data-aos="fade-up">
+                <div id="chart3"></div> 
+            </div>
+        </div>
+    </div>
 </div>
 
-<div>
-    {% for c in categories %}
-    <ul>
-        <li>{{c.category}}</li>
-        <li>{{c.clue_count}}</li>
-    </ul>
-    {% endfor %}
-</div>
-</div>
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<script>
+
+    var graph1 = {{graph1JSON | safe }};
+    Plotly.newPlot('chart1', graph1, {});
+
+
+    var graph5 = {{fig5 | safe }};
+    Plotly.newPlot('chart3', graph5, {});
+    
+
+    
+    AOS.init({
+        offset:400,
+        duration:1000,
+    });
+
+</script>
+
+
 
 
 {% endblock %}
