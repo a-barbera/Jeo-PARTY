@@ -212,7 +212,7 @@ function addCategory(category) {
         // add to i to move to next value in jeo_values
         i+=1
     })
-    // putting it back into the HTML
+
     game.append(column)
 }
 
@@ -220,7 +220,7 @@ function addCategory(category) {
 function flipSquare() {
     // blank out the text and change font stylings to be smaller and white
     this.innerHTML = ""
-    this.style.fontSize = '0.8vw'
+    this.style.fontSize = '14px'
     this.style.lineHeight = '30px'
     this.style.color = 'rgb(255,255,255)'
 
@@ -266,7 +266,7 @@ function checkAnswer(){
     allSquares.forEach(square => square.addEventListener('click', flipSquare))
 
     // change font stylings back to the original size and color
-    squareOfButton.style.fontSize = '1.8vw'
+    squareOfButton.style.fontSize = '14px'
     squareOfButton.style.lineHeight = '50px'
     squareOfButton.style.color = 'rgb(232, 184, 125)'
 

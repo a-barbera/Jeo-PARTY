@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 @font-face {
-    font-family: Korinna;
+    font-family: 'Korinna';
     src: url(ITC_Korinna_Bold.ttf);
 }
 body {
     font-family: 'Anton', sans-serif;
+    max-height: 100%;
+    background-color: #a0b6e7;
 }
 
 #game body{
@@ -18,14 +20,19 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    font-family: Korinna;
+    font-family: 'Korinna';
 }
 
+#map { 
+    height: 800px;
+    font-family: 'Korinna', sans-serif;
+ }
 
-html, body, #map {
-    height: 100%;
-    width: 100vw;
-    }
+.map {
+    text-align: center;
+    justify-content: center;
+   
+}
 
 #game p {
     font-family: 'ITC_ Korinna', sans-serif;

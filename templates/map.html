@@ -5,34 +5,39 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}{% endblock %}</title>
+    <title>{% block title %}Map{% endblock %}</title>
     <!-- BOOTSTRAP CSS LINK -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <!-- BOOTSTRAP ICONS LINK -->
+    <!-- BOOTSTRAP ICONS LINKS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <!-- link for local css -->
+    <link rel="stylesheet" href="{{url_for('static', filename ='css/styles.css')}}">
+    <!-- <link rel="stylesheet" href="{{url_for('static', filename ='css/mapstyle.css')}}"> -->
     <!-- plotly JS link -->
-    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-2.17.1.min.js"></script>
     <!-- Google FONT CSS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <!-- LEAFLET CSS -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
-    integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
-    crossorigin=""/>
+     integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+     crossorigin=""/>
+     <!-- Avoid favicon requests -->
+     <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon"> 
+     <!-- D3 JS LINK -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
     <script src="https://d3js.org/d3.v5.min.js"></script>
-     <!-- Leaflet JS -->
-    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
-    integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
-    crossorigin=""></script>
-    <!-- link for local css -->
-    <link rel="stylesheet" href="{{url_for('static', filename ='css/styles.css')}}">
-    <link rel="stylesheet" href="{{url_for('static', filename ='css/mapstyle.css')}}">
+     <!-- Plotly AOS JS and CSS link -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
 
 </head>
 <body>
 <!-- NAVBAR -->
 <section>
-    <nav class="navbar navbar-expand-lg bg-primary navbar-dark text-light bg-body-tertiarybg-body-tertiary" >
+    <nav class="navbar navbar-expand-lg alt-primary navbar-dark text-light bg-body-tertiarybg-body-tertiary" >
         <div class="container-fluid">
         <a class="navbar-brand" href="/">
             <div class="h3 p-1">
@@ -62,23 +67,35 @@
 <!-- END NAVBAR -->
 
 
-    <div class="container-fluid text-center">
-    <!-- <h1 class="text-warning">JeoPARTY</h1> -->
-    <div><img src="static/title.png" style="width:200px" alt="jeopardy title"></div>
-    <h2>Jeopardy's Top Ten</h2>
-        <p>Use the map below to see information about Jeopardy's biggest winners!</p>
 
-    <div id="map"></div>
+<div class="container-fluid bg-secondary text-center">
+    <div class="row">
+        <div class="col">
+        <img src="static/media/title.png" style="width:200px" alt="jeopardy title">
+        <h2>Jeopardy's Top Ten</h2>
+        <p>Use the map below to see information about some of Jeopardy's winners!</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <div id="map"></div>
+        </div>
+    </div>
+</div>
     
     
+
+
     <!-- JS BOOTSTRAP PREMADE CODE -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+     <!-- Leaflet JS -->
+     <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+     integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+     crossorigin=""></script>
     <!-- adding the jQuery library CDN? -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <!-- adding local JS file -->
     <script type="text/javascript" src="{{url_for('static', filename ='js/mapscript.js')}}"></script>
-    
-    
-    
+       
 </body>
 </html>

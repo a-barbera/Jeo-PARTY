@@ -35,14 +35,14 @@ db = SQLAlchemy(app)
 class Categories(db.Model):
     __tablename__ = 'categories'
     index = db.Column(db.Integer, primary_key=True)
-    category = db.Column(db.String(1000))
+    category = db.Column(db.String(100))
     clue_count = db.Column(db.Integer)
 
 class Contestants(db.Model):
     __tablename__ = 'contestants'
     contestant_id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(1000))
-    notes = db.Column(db.String(1000))
+    name = db.Column(db.String(100))
+    notes = db.Column(db.String(100))
     games_played = db.Column(db.Integer)
     total_winnings = db.Column(db.Integer)
     
@@ -76,7 +76,7 @@ def stats():
     contestants = Contestants.query.all()
     contestants_dict = [u.__dict__ for u in Contestants.query.all()]
     contestants_dict_df = pd.DataFrame(contestants_dict).head(10)
-    print(contestants_dict_df)
+    # print(contestants_dict_df)
 
    
 
@@ -138,9 +138,9 @@ def game():
 def map():
     return render_template("map.html")
 
-# @app.route("/tribute")
-# def tribute():
-#     return render_template("tribute.html")
+@app.route("/tribute")
+def tribute():
+    return render_template("tribute.html")
 
 
 if __name__ == "__main__":

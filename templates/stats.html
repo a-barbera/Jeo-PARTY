@@ -6,12 +6,12 @@
 <!-- NAVBAR -->
 <li class="nav-item dropdown">
     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-    Dropdown link
+    Graphs
     </a>
     <ul class="dropdown-menu">
-    <li><a class="dropdown-item" href="#graph1JSON">Top Categories</a></li>
-    <li><a class="dropdown-item" href="#fig5">Top Winners</a></li>
-    <!-- <li><a class="dropdown-item" href="/tribute">Alex is Bae</a></li> -->
+    <li><a class="dropdown-item" href="#chart1">Top Categories</a></li>
+    <li><a class="dropdown-item" href="#chart3">Top Winners</a></li>
+    <li><a class="dropdown-item" href="/tribute">Alex is Bae</a></li>
     </ul>
 </li>
 
@@ -23,45 +23,47 @@
     <h2>See The Stats!</h2>
 
 
-<!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-<div id="plot"></div>
-    <!-- <div id="graph1JSON"></div>
-    <div id="fig5"></div> -->
-   
 
+<div class="container-fluid">
     <div class="row p-4">
-        <div class="card m-auto" data-aos="fade-down" >
-                <div id="chart1"></div>
-
-                   
-            
+        <div class="card">
+            <div class="card-header">
+              Top Categories
+            </div>
+            <div class="card-body alt-primary" data-aos="fade-down">
+                <div id="chart1"></div> 
+            </div>
         </div>
-    
     <div class="row p-4">
-        <div class="card m-auto" data-aos="fade-up">
-                <div id="chart3"></div>
-
-                   
-            
+        <div class="card">
+            <div class="card-header">
+              Top 10 Winners
+            </div>
+            <div class="card-body alt-primary" data-aos="fade-up">
+                <div id="chart3"></div> 
+            </div>
         </div>
     </div>
+</div>
 
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 <script>
-/*
+
     var graph1 = {{graph1JSON | safe }};
-    Plotly.plot('chart1', graph1, {});
+    Plotly.newPlot('chart1', graph1, {});
 
 
     var graph5 = {{fig5 | safe }};
-    Plotly.plot('chart3', graph5, {});
+    Plotly.newPlot('chart3', graph5, {});
     
 
     
     AOS.init({
         offset:400,
         duration:1000,
-    });*/
+    });
 
 </script>
 
