@@ -7,7 +7,7 @@ var score = 0
 
 // on startup run the below, fetching the local json file of questions
 // json file has been cleaned to only include categories which have a minimum of 5 questions
-fetch("static/js/cleanedJeoQs.json")
+fetch("static/js/cleanedQs.json")
     .then(response => response.json())
     .then(function(d){
         // randomly select 6 categories
@@ -39,12 +39,12 @@ fetch("static/js/cleanedJeoQs.json")
                 questions.push(q.question)
 
                 // clean answer of special chracters
-                answer = q.answer.replace(/[&\/\\#,+()$~%.'":*?<>{}]/g, '');
+                answerClean = q.answer.replace(/[&\/\\#,+()$~%.'":*?<>{}]/g, '');
 
                 // create an array to hold the question and the answer
                 dict = {
                     question: q.question,
-                    answer: q.answer
+                    answer: answerClean
                 }
 
                 // add the array to the list of arrays
