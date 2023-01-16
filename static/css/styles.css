@@ -6,7 +6,10 @@
 body {
     font-family: 'Anton', sans-serif;
     max-height: 100%;
-    background-color: #a0b6e7;
+    /* background-color: #a0b6e7; */
+    background: rgb(2,0,36);
+    background-image: radial-gradient(circle, rgba(0,212,255,1) 10%, rgba(9,9,121,1) 60%,rgba(2,0,36,1) 75%);
+
 }
 
 #game body{

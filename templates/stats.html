@@ -18,7 +18,7 @@
 {% endblock%}
 
 {%block stats%}
-<div class="container-fluid text-center">
+<div class="container-fluid text-light text-center">
 <div class="container_fluid">
     <h2>See The Stats!</h2>
 
@@ -57,13 +57,7 @@
 
     var graph5 = {{fig5 | safe }};
     Plotly.newPlot('chart3', graph5, {});
-    
 
-    
-    AOS.init({
-        offset:400,
-        duration:1000,
-    });
 
 </script>
 
