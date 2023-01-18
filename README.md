@@ -52,6 +52,8 @@ Game categories and the answers for those categories are randomized every time t
  - The background of incorrect answers will turn red.
  - The background of correct answers will turn green.
  - The answer's element can be inspected to get the correct answer.
+ 
+ Upon refreshing the game page of the website, the user will be given a completely new game of Jeopardy, giving not just one playable game, but an individual combination each time it is accessed. 
 <hr>
 
  ![game](static/media/Screenshot_20230117_072316.png)
