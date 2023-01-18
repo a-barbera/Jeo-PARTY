@@ -26,7 +26,7 @@ This project can be recreated on a local server and is also hosted [here](#).
 5. Peter Warren
 
 # Data ETL
-Pandas was used to load JSON from Cluebase into a dataframe. This dataframe was then cleaned before being read into a postgres database. The information in this database was used to create interactive data visualizations for the stats.
+Pandas was used to load JSON from Cluebase into a dataframe. This dataframe was then cleaned before being read into a postgres database. The information in this database was used to create interactive data visualizations for the stats.  Upon recreation of this project, the user would need to personalize their own username and password information to access the postgreSQL database.  This can be done in the Flask app.py itself in the main repository.
 <hr>
 <b>Database tables</b>
 
@@ -44,7 +44,7 @@ The website is organized into three sections.
  - View the Map!
 
 ## The Game
-The Game was created using javascript (including libraries d3.js and jQuery) and contains a gameboard that mimics the look and feel of the actual Jeopardy! gameboard. 
+The Game was created using javascript (including libraries jQuery and d3.js) and contains a gameboard that mimics the look and feel of the actual Jeopardy! gameboard. 
 
 Game categories and the answers for those categories are randomized every time the page is reloaded. When a player picks an answer, the response to the answer is entered into a text box. The response must exactly match what is contained in the JSON file. 
 
@@ -52,9 +52,19 @@ Game categories and the answers for those categories are randomized every time t
  - The background of incorrect answers will turn red.
  - The background of correct answers will turn green.
  - The answer's element can be inspected to get the correct answer.
+<hr>
+
+ ![game](static/media/Screenshot_20230117_072316.png)
 
  ## The Stats
 Accessing the SQL database from inside the flask app, charts were populated that assist the user in visualizing the top clue categories from the years 1985-2012.  Another visual created shows the shows highest earning players, along with how many games they played to reach that goal.  These charts were created using JavaScript and Plotly and are interactive.
 
+![stats](static/media/Screenshot_20230117_072212.png)
+
  ## The Map
 The interactive map shares a sample set of 200 winning contestants from Jeopardy from the years 1985-2012, along with information about how much they won, how many games they played, and a personal fact.  This US map is generated using Leaflet.js and was created in part by using Google Maps API.  Upon recreation of this project, the user would need to apply their own api key in order to generate coordinates data from the city/state location information available from the original data source. 
+
+![map](static/media/Screenshot_20230117_072251.png)
+
+# Thank you!
+![credits](static/media/Credits.png)
